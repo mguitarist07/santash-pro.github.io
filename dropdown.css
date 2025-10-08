@@ -1,0 +1,63 @@
+ /* Dropdown Menu - ВЕРТИКАЛЬНОЕ */
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 280px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+        display: block !important;
+    }
+
+    .dropdown.active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        max-height: 500px;
+    }
+
+    .dropdown-menu li {
+        padding: 0;
+        border-bottom: 1px solid #f0f0f0;
+        display: block;
+        width: 100%;
+    }
+
+    .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-menu a {
+        padding: 12px 20px;
+        display: block;
+        color: var(--dark);
+        transition: all 0.2s;
+        border-radius: 0;
+        white-space: nowrap;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: #f8f9fa;
+        color: var(--secondary);
+        padding-left: 25px;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+    }

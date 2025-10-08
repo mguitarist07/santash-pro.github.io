@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaNtash - Комплексная поставка строительных материалов по оптовым ценам</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+<body>
+    <!-- Header -->
+    <header>
+    <div class="header-top">
+        <div class="container">
+            <div class="contact-info">
+                <div><i class="fas fa-phone"></i> +7 (495) 123-45-67</div>
+                <div><i class="fas fa-envelope"></i> info@santash.ru</div>
+            </div>
+            <div class="working-hours">
+                <i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00
+            </div>
+        </div>
+    </div>
+    <div class="header-main">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="SaNtash" class="logo-image"></a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="main-nav">
+              <!-- Крестик для закрытия меню - виден только на мобильных -->
+              <button class="close-menu">
+                 <i class="fas fa-times"></i>
+              </button>
+               <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+        
+               <!-- Каталог с выпадающим меню -->
+                 <li class="dropdown">
+                  <a href="catalog.html" class="dropdown-toggle">Каталог <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="catalog.html#materials">Строительные материалы</a></li>
+                      <li><a href="catalog.html#finishing">Отделочные материалы</a></li>
+                      <li><a href="catalog.html#tools">Инструменты и оборудование</a></li>
+                      <li><a href="catalog.html#plumbing">Сантехника</a></li>
+                      <li><a href="catalog.html#electrical">Электрика</a></li>
+                      <li><a href="catalog.html#windows">Окна и двери</a></li>
+                      <li><a href="catalog.html#flooring">Напольные покрытия</a></li>
+                      <li><a href="catalog.html#lighting">Освещение</a></li>
+                      <li><a href="catalog.html#roofing">Кровельные материалы</a></li>
+                      <li><a href="catalog.html#paint">Лакокрасочные материалы</a></li>
+                    </ul>
+                  </li>
+        
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Новости</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Главная</a></li>
+                <li>Новости</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>Последние новости</h2>
+                <p>Будьте в курсе последних событий и проектов нашей компании</p>
+            </div>
+
+            <div class="news-grid">
+                <!-- Новость 1 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">15.12.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Завершено строительство жилого комплекса "Северный"</h3>
+                        <p>Мы рады сообщить о успешном завершении строительства современного жилого комплекса в Москве. Объект сдан в эксплуатацию досрочно.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Строительство</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новость 2 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">10.12.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Новые технологии в строительстве</h3>
+                        <p>Внедряем инновационные BIM-технологии для повышения эффективности и качества строительных процессов.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Технологии</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новость 3 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">05.12.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Открытие нового офиса в Санкт-Петербурге</h3>
+                        <p>Расширяем географию присутствия. Теперь наши услуги доступны и жителям северной столицы.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Компания</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новость 4 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">28.11.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Экологичные материалы в строительстве</h3>
+                        <p>Переходим на использование экологически чистых и безопасных строительных материалов.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Экология</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новость 5 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">20.11.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Новые проекты 2024 года</h3>
+                        <p>Анонсируем старт новых масштабных строительных проектов в следующем году.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Проекты</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новость 6 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">15.11.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Повышение квалификации сотрудников</h3>
+                        <p>Наши специалисты прошли обучение по новым стандартам строительства и безопасности.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Персонал</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новость 7 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">10.11.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Скидки на ремонтные работы</h3>
+                        <p>Специальное предложение: скидка 15% на все ремонтные работы при заказе до конца месяца.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Акции</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новость 8 -->
+                <div class="news-card">
+                    <div class="news-image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                        <div class="news-date">05.11.2023</div>
+                    </div>
+                    <div class="news-content">
+                        <h3>Партнерство с ведущими брендами</h3>
+                        <p>Заключены партнерские соглашения с мировыми производителями строительных материалов.</p>
+                        <div class="news-meta">
+                            <span class="news-category">Партнерства</span>
+                            <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="prev"><i class="fas fa-chevron-left"></i> Назад</a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next">Вперед <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Подпишитесь на рассылку</h2>
+                <p>Будьте в курсе последних новостей и специальных предложений</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Ваш email" required>
+                    <button type="submit" class="btn">Подписаться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SaNtash</h3>
+                    <p>Профессиональные строительные и ремонтные услуги с гарантией качества.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Строительство домов</a></li>
+                        <li><a href="#">Ремонт помещений</a></li>
+                        <li><a href="#">Инженерные системы</a></li>
+                        <li><a href="#">Дизайн интерьеров</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Неглинная, д. 12</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@santash.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SaNtash. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

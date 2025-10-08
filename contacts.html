@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaNtash - Комплексная поставка строительных материалов по оптовым ценам</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+    
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <div><i class="fas fa-phone"></i> +7 (495) 123-45-67</div>
+                    <div><i class="fas fa-envelope"></i> info@santash.ru</div>
+                </div>
+                <div class="working-hours">
+                    <i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html"><img src="logo.png" alt="SaNtash" class="logo-image"></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav id="main-nav">
+                    <button class="close-menu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li class="dropdown">
+                            <a href="catalog.html" class="dropdown-toggle">Каталог <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="catalog.html#materials">Строительные материалы</a></li>
+                                <li><a href="catalog.html#finishing">Отделочные материалы</a></li>
+                                <li><a href="catalog.html#tools">Инструменты и оборудование</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="news.html">Новости</a></li>
+                        <li><a href="contacts.html" class="active">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Контакты</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Главная</a></li>
+                <li>Контакты</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Свяжитесь с нами</h2>
+                <p>Мы всегда готовы ответить на ваши вопросы и обсудить сотрудничество</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Левый контейнер - Контактная информация -->
+                <div class="contact-left">
+                    <div class="contact-info-page">
+                        <h3><i class="fas fa-map-marker-alt"></i> Контактная информация</h3>
+                        
+                        <div class="contact-items-grid">
+                            <!-- Адрес -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-building"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4><i class="fas fa-map-pin"></i> Адрес офиса и склада</h4>
+                                    <p><strong>г. Москва, ул. Неглинная, д. 12</strong></p>
+                                </div>
+                            </div>
+
+                            <!-- Время работы -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4><i class="fas fa-business-time"></i> Режим работы</h4>
+                                    <div class="working-hours">
+                                        <p><strong>Рабочие дни:</strong> <span>Пн-Пт: 9:00-18:00</span></p>
+                                    </div>
+                                    <div class="hours-note">
+                                        <i class="fas fa-info-circle"></i>
+                                        <strong>Внимание:</strong> Прием заказов онлайн - круглосуточно
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Телефоны -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4><i class="fas fa-phone"></i> Телефон для связи</h4>
+                                    <p> +7 (495) 123-45-67</p>
+                                </div>
+                            </div>
+
+                            <!-- Электронная почта -->
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4><i class="fas fa-at"></i> E-mail</h4>
+                                    <p>info@santash.ru</p>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Правый контейнер - Карта и форма -->
+                <div class="contact-right">
+                    <!-- Карта -->
+                    <div class="map-section-right">
+                        <div class="map-container">
+                            <div id="map"></div>
+                            <div class="map-overlay">
+                                <h4><i class="fas fa-map-marker-alt"></i> Наш офис</h4>
+                                <p>ул. Неглинная, д. 12</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SaNtash</h3>
+                    <p>Комплексная поставка строительных материалов по оптовым ценам.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Неглинная, д. 12</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@santash.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SaNtash. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Яндекс карты -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        // Инициализация карты
+        ymaps.ready(init);
+        
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [55.76, 37.64],
+                zoom: 14
+            });
+
+            // Добавляем метку
+            var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+                hintContent: 'SaNtash',
+                balloonContent: 'г. Москва, ул. Неглинная, д. 12<br>Бизнес-центр "Бизнес-центр"'
+            }, {
+                preset: 'islands#greenDotIcon'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

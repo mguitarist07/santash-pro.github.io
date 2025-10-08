@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaNtash - Комплексная поставка строительных материалов по оптовым ценам</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+<body>
+  <!-- Top Line -->
+<div id="TopLine">
+    <div class="container">
+        <div class="slogan no-mobile">Комплексная поставка строительных материалов по оптовым ценам</div>
+        <div class="socseti">
+            <a class="btn callback" href="#form-callback">Перезвонить?</a>
+        </div>
+    </div>
+</div>
+    <!-- Header -->
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="contact-info">
+                <div><i class="fas fa-phone"></i> +7 (495) 123-45-67</div>
+                <div><i class="fas fa-envelope"></i> info@santash.ru</div>
+            </div>
+            <div class="working-hours">
+                <i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00
+            </div>
+        </div>
+    </div>
+    <div class="header-main">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="SaNtash" class="logo-image"></a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="main-nav">
+              <!-- Крестик для закрытия меню - виден только на мобильных -->
+              <button class="close-menu">
+                 <i class="fas fa-times"></i>
+              </button>
+               <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+        
+               <!-- Каталог с выпадающим меню -->
+                 <li class="dropdown">
+                  <a href="catalog.html" class="dropdown-toggle">Каталог <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="catalog.html#materials">Строительные материалы</a></li>
+                      <li><a href="catalog.html#finishing">Отделочные материалы</a></li>
+                      <li><a href="catalog.html#tools">Инструменты и оборудование</a></li>
+                      <li><a href="catalog.html#plumbing">Сантехника</a></li>
+                      <li><a href="catalog.html#electrical">Электрика</a></li>
+                      <li><a href="catalog.html#windows">Окна и двери</a></li>
+                      <li><a href="catalog.html#flooring">Напольные покрытия</a></li>
+                      <li><a href="catalog.html#lighting">Освещение</a></li>
+                      <li><a href="catalog.html#roofing">Кровельные материалы</a></li>
+                      <li><a href="catalog.html#paint">Лакокрасочные материалы</a></li>
+                    </ul>
+                  </li>
+        
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- Slider Section -->
+    <section class="slider-section" id="home">
+        <div class="slider">
+            <!-- Слайд 1 -->
+            <div class="slide active" style="background-image: url('images/slider1.jpg');">
+                <div class="slide-content">
+                    <h1>Строительные материалы</h1>
+                    <p>Оптом, по самым низким ценам</p>
+                    <a href="#contact" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <!-- Слайд 2 -->
+            <div class="slide" style="background-image: url('images/slider2.jpg');">
+                <div class="slide-content">
+                    <h1>Обновление каталога</h1>
+                    <p>Появились новые товары в разделе сухие смеси</p>
+                    <a href="#contact" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <!-- Слайд 3 -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+                <div class="slide-content">
+                    <h1>Индивидуальный подход</h1>
+                    <p>Мы учитываем все пожелания клиента и предлагаем оптимальные решения</p>
+                    <a href="#projects" class="btn">Подробнее</a>
+                </div>
+            </div>
+            
+            <!-- Стрелки управления -->
+            <button class="slider-arrow prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Индикаторы -->
+            <div class="slider-controls">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Каталог</h2>
+            <p class="btn">Посмотреть все</p>
+        </div>
+        
+        <div class="services-container">
+            <button class="services-nav prev hidden">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="services-scroll-wrapper">
+                <div class="services-grid">
+                    <!-- Услуга 1 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/plitka.jpg')"></div>
+                        <div class="service-content">
+                            <h3>Плитка</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 2 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/izolate.jpg')"></div>
+                        <div class="service-content">
+                            <h3>Тепло и звукоизоляция</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 3 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/gips.jpg')"></div>
+                        <div class="service-content">
+                            <h3>Гипсокартон</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 4 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/potolok.jpg')"></div>
+                        <div class="service-content">
+                            <h3>Потолок</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 5 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/napolka.jpg')"></div>
+                        <div class="service-content">
+                            <h3>Напольные покрытия</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 6 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/germetik.jpg')"></div>
+                        <div class="service-content">
+                            <h3>ЛКМ и герметики</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 7 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/tools.jpg')"></div>
+                        <div class="service-content">
+                            <h3>Инструменты</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Услуга 8 -->
+                    <div class="service-card">
+                        <div class="service-img" style="background-image: url('images/smesi.jpg')"></div>
+                        <div class="service-content">
+                            <h3>Смеси</h3>
+                            <p>описание</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="services-nav next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <div class="services-indicators">
+                <div class="services-indicator active"></div>
+                <div class="services-indicator"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Full Width Banner -->
+    <section class="full-width-banner">
+        <div class="container">
+            <img src="images/ban-u.png" alt="Баннер" class="banner-image">
+        </div>
+    </section>
+
+<!-- Partners Slider -->
+    <section class="partners-slider">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши партнеры</h2>
+            </div>
+            <div class="partners-scroll-container">
+                <div class="partners-track">
+                    <div class="partner-item">
+                        <img src="images/partner1.jpg" alt="Партнер 1">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner2.jpg" alt="Партнер 2">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner3.png" alt="Партнер 3">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner4.jpg" alt="Партнер 4">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner5.jpg" alt="Партнер 5">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner6.jpg" alt="Партнер 6">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner7.png" alt="Партнер 7">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner8.jpg" alt="Партнер 8">
+                    </div>
+                    <div class="partner-item">
+                        <img src="images/partner9.jpg" alt="Партнер 9">
+                    </div>
+                    <div class="partner-item">
+                        <img src="путь/к/лого10.png" alt="Партнер 10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Комплексная поставка строительных материалов по оптовым ценам</h2>
+                    <p>Мы оптовые поставщики строительных и отделочных материалов. С 2014 года обеспечиваем наличие нужных стройматериалов на стройплощадке для непрерывного строительства.</p>
+                    <p>Найдем и доставим по Москве и Московской области всё, что может вам понадобиться для строительства: комплектующие для монолитного строительства, газосиликатные блоки , кирпич, тепло и гидроизоляционные материалы, сухие смеси, отделочные материалы, расходные материалы, спецодежду и инструменты.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/about.png" alt="О компании">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h1>Задайте вопрос специалисту</h1>
+                <p>Введите контактный номер телефона в форму ниже и мы перезвоним вам в течении 2-х минут.</p>
+            </div>
+            <div class="callback-form">
+    <div class="callback-input-wrapper">
+        <input type="tel" class="callback-input" name="phone" required placeholder="+7 926 777-77-77">
+    </div>
+    <button type="submit" class="callback-btn">Поговорить со специалистом</button>
+</div>
+        </div>
+    </section>
+
+  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SaNtash</h3>
+                    <p>Комплексная поставка строительных материалов по оптовым ценам</p>
+                </div>
+                <div class="footer-column">
+                    <ul>
+                        <li><a href="#">Плитка</a></li>
+                        <li><a href="#">Тепло и звукоизоляция</a></li>
+                        <li><a href="#">Гипсокартон</a></li>
+                        <li><a href="#">Потолок</a></li>
+                        <li><a href="#">Напольные покрытия</a></li>
+                        <li><a href="#">ЛКМ и герметики</a></li>
+                        <li><a href="#">Интсрументы</a></li>
+                        <li><a href="#">Смеси</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Неглинная, д. 12</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@santash.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SaNtash. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>

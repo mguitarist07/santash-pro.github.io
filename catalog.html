@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaNtash - Комплексная поставка строительных материалов по оптовым ценам</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+<body>
+<!-- Header -->
+    <header>
+    <div class="header-top">
+        <div class="container">
+            <div class="contact-info">
+                <div><i class="fas fa-phone"></i> +7 (495) 123-45-67</div>
+                <div><i class="fas fa-envelope"></i> info@santash.ru</div>
+            </div>
+            <div class="working-hours">
+                <i class="fas fa-clock"></i> Пн-Пт: 9:00-18:00
+            </div>
+        </div>
+    </div>
+    <div class="header-main">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="logo.png" alt="SaNtash" class="logo-image"></a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="main-nav">
+              <!-- Крестик для закрытия меню - виден только на мобильных -->
+              <button class="close-menu">
+                 <i class="fas fa-times"></i>
+              </button>
+               <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">О компании</a></li>
+        
+               <!-- Каталог с выпадающим меню -->
+                 <li class="dropdown">
+                  <a href="catalog.html" class="dropdown-toggle">Каталог <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="catalog.html#materials">Строительные материалы</a></li>
+                      <li><a href="catalog.html#finishing">Отделочные материалы</a></li>
+                      <li><a href="catalog.html#tools">Инструменты и оборудование</a></li>
+                      <li><a href="catalog.html#plumbing">Сантехника</a></li>
+                      <li><a href="catalog.html#electrical">Электрика</a></li>
+                      <li><a href="catalog.html#windows">Окна и двери</a></li>
+                      <li><a href="catalog.html#flooring">Напольные покрытия</a></li>
+                      <li><a href="catalog.html#lighting">Освещение</a></li>
+                      <li><a href="catalog.html#roofing">Кровельные материалы</a></li>
+                      <li><a href="catalog.html#paint">Лакокрасочные материалы</a></li>
+                    </ul>
+                  </li>
+        
+                <li><a href="news.html">Новости</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Каталог товаров</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Главная</a></li>
+                <li>Каталог</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog">
+        <div class="container">
+            <div class="catalog-content">
+                <!-- Sidebar -->
+                <aside class="catalog-sidebar">
+                    <h3>Категории товаров</h3>
+                    <ul class="catalog-categories">
+                        <li><a href="#materials" class="active"><i class="fas fa-cubes"></i> Строительные материалы</a></li>
+                        <li><a href="#finishing"><i class="fas fa-paint-roller"></i> Отделочные материалы</a></li>
+                        <li><a href="#tools"><i class="fas fa-tools"></i> Инструменты и оборудование</a></li>
+                        <li><a href="#plumbing"><i class="fas fa-faucet"></i> Сантехника</a></li>
+                        <li><a href="#electrical"><i class="fas fa-bolt"></i> Электрика</a></li>
+                        <li><a href="#windows"><i class="fas fa-door-closed"></i> Окна и двери</a></li>
+                        <li><a href="#flooring"><i class="fas fa-square"></i> Напольные покрытия</a></li>
+                        <li><a href="#lighting"><i class="fas fa-lightbulb"></i> Освещение</a></li>
+                        <li><a href="#roofing"><i class="fas fa-home"></i> Кровельные материалы</a></li>
+                        <li><a href="#paint"><i class="fas fa-fill-drip"></i> Лакокрасочные материалы</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Catalog Grid -->
+                <div class="catalog-main">
+                    <div class="catalog-grid">
+                        <!-- Item 1 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 850 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Строительные материалы</h3>
+                                <p>Цемент, песок, щебень, кирпич, бетонные блоки и другие основные строительные материалы</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 1 200 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Отделочные материалы</h3>
+                                <p>Штукатурка, шпаклевка, обои, декоративные покрытия для внутренней и внешней отделки</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1572981779307-38f8b0456222?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 2 500 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Инструменты и оборудование</h3>
+                                <p>Электроинструменты, ручной инструмент, строительное оборудование и оснастка</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 3 800 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Сантехника</h3>
+                                <p>Смесители, раковины, унитазы, ванны, душевые кабины и комплектующие</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 5 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 950 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Электрика</h3>
+                                <p>Кабели, розетки, выключатели, светильники, электрощитовое оборудование</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 12 000 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Окна и двери</h3>
+                                <p>Пластиковые и деревянные окна, входные и межкомнатные двери, фурнитура</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 7 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 1 500 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Напольные покрытия</h3>
+                                <p>Ламинат, паркет, линолеум, ковролин, плитка и сопутствующие материалы</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 8 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 2 200 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Освещение</h3>
+                                <p>Люстры, бра, точечные светильники, LED-панели, уличное освещение</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 9 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 4 500 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Кровельные материалы</h3>
+                                <p>Металлочерепица, профнастил, мягкая кровля, водосточные системы</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 10 -->
+                        <div class="catalog-item">
+                            <div class="catalog-image" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=60')">
+                                <div class="catalog-overlay">
+                                    <div class="catalog-price">от 650 руб.</div>
+                                </div>
+                            </div>
+                            <div class="catalog-content-info">
+                                <h3>Лакокрасочные материалы</h3>
+                                <p>Краски, лаки, эмали, грунтовки, защитные покрытия для различных поверхностей</p>
+                                <div class="catalog-meta">
+                                    <div class="catalog-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <button class="catalog-btn">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SaNtash</h3>
+                    <p>Профессиональные строительные и ремонтные услуги с гарантией качества.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#">Строительство домов</a></li>
+                        <li><a href="#">Ремонт помещений</a></li>
+                        <li><a href="#">Инженерные системы</a></li>
+                        <li><a href="#">Дизайн интерьеров</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Неглинная, д. 12</li>
+                        <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@santash.ru</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 SaNtash. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
