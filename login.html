@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в админ-панель - SaNtash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1><i class="fas fa-lock"></i> SaNtash Admin</h1>
+            <p>Панель управления контентом</p>
+        </div>
+
+        <form class="login-form" id="loginForm">
+            <div class="alert alert-error" id="errorAlert">
+                Неверный логин или пароль
+            </div>
+
+            <div class="form-group">
+                <label for="username"><i class="fas fa-user"></i> Логин</label>
+                <input type="text" id="username" class="form-control" required autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password"><i class="fas fa-key"></i> Пароль</label>
+                <div class="password-container">
+                    <input type="password" id="password" class="form-control" required autocomplete="current-password">
+                    <button type="button" class="toggle-password" id="togglePassword">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="attempts-warning" id="attemptsWarning">
+                    Осталось попыток: <span id="attemptsLeft">3</span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="loginBtn">
+                <i class="fas fa-sign-in-alt"></i> Войти
+            </button>
+
+            <div class="security-info">
+                <i class="fas fa-shield-alt"></i> Доступ разрешен только авторизованным пользователям
+            </div>
+        </form>
+
+        <div class="login-footer">
+            &copy; 2025 SaNtash. Все права защищены.
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

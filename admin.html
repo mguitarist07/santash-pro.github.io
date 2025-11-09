@@ -1,0 +1,321 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - SaNtash</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <h2><i class="fas fa-cogs"></i> SaNtash Admin</h2>
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li><a href="#dashboard" class="nav-active"><i class="fas fa-tachometer-alt"></i> Дашборд</a></li>
+                    <li><a href="#news"><i class="fas fa-newspaper"></i> Управление новостями</a></li>
+                    <li><a href="#catalog"><i class="fas fa-boxes"></i> Управление каталогом</a></li>
+                    <li><a href="#contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li><a href="#settings"><i class="fas fa-cog"></i> Настройки</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <h1 id="page-title">Дашборд</h1>
+                <div class="admin-actions">
+                    <button class="btn btn-secondary" id="preview-btn">
+                        <i class="fas fa-eye"></i> Предпросмотр сайта
+                    </button>
+                    <button class="btn btn-primary" id="save-all-btn">
+                        <i class="fas fa-save"></i> Сохранить все изменения
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard -->
+            <section id="dashboard" class="admin-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon news">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="news-count">0</h3>
+                            <p>Новостей</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon catalog">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="products-count">0</h3>
+                            <p>Товаров в каталоге</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon contacts">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="contacts-updated">0</h3>
+                            <p>Контактов обновлено</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Последние изменения</h3>
+                    <div id="activity-log" class="activity-list">
+                        <!-- Активность будет добавляться через JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- News Management -->
+            <section id="news" class="admin-section">
+                <div class="section-header">
+                    <h2>Управление новостями</h2>
+                    <button class="btn btn-success" id="add-news-btn">
+                        <i class="fas fa-plus"></i> Добавить новость
+                    </button>
+                </div>
+
+                <!-- News List -->
+                <div class="news-list" id="news-list">
+                    <!-- Список новостей будет генерироваться через JS -->
+                </div>
+
+                <!-- News Form (скрыт по умолчанию) -->
+                <div class="news-form-container" id="news-form-container" style="display: none;">
+                    <h3 id="news-form-title">Добавить новость</h3>
+                    <form id="news-form" class="admin-form">
+                        <input type="hidden" id="news-id">
+                        
+                        <div class="form-group">
+                            <label for="news-title">Заголовок новости</label>
+                            <input type="text" id="news-title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="news-content">Текст новости</label>
+                            <textarea id="news-content" rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="news-date">Дата публикации</label>
+                            <input type="date" id="news-date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="news-category">Категория</label>
+                            <select id="news-category">
+                                <option value="Строительство">Строительство</option>
+                                <option value="Технологии">Технологии</option>
+                                <option value="Компания">Компания</option>
+                                <option value="Экология">Экология</option>
+                                <option value="Проекты">Проекты</option>
+                                <option value="Персонал">Персонал</option>
+                                <option value="Акции">Акции</option>
+                                <option value="Партнерства">Партнерства</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="news-image">URL изображения</label>
+                            <input type="url" id="news-image" placeholder="https://images.unsplash.com/...">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancel-news-btn">Отмена</button>
+                            <button type="submit" class="btn btn-primary">Сохранить новость</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Catalog Management -->
+            <section id="catalog" class="admin-section">
+                <div class="section-header">
+                    <h2>Управление каталогом</h2>
+                    <button class="btn btn-success" id="add-product-btn">
+                        <i class="fas fa-plus"></i> Добавить товар
+                    </button>
+                </div>
+
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <select id="category-filter">
+                        <option value="all">Все категории</option>
+                        <option value="materials">Строительные материалы</option>
+                        <option value="finishing">Отделочные материалы</option>
+                        <option value="tools">Инструменты и оборудование</option>
+                        <option value="plumbing">Сантехника</option>
+                        <option value="electrical">Электрика</option>
+                        <option value="windows">Окна и двери</option>
+                        <option value="flooring">Напольные покрытия</option>
+                        <option value="lighting">Освещение</option>
+                        <option value="roofing">Кровельные материалы</option>
+                        <option value="paint">Лакокрасочные материалы</option>
+                    </select>
+                </div>
+
+                <!-- Products List -->
+                <div class="products-list" id="products-list">
+                    <!-- Список товаров будет генерироваться через JS -->
+                </div>
+
+                <!-- Product Form (скрыт по умолчанию) -->
+                <div class="product-form-container" id="product-form-container" style="display: none;">
+                    <h3 id="product-form-title">Добавить товар</h3>
+                    <form id="product-form" class="admin-form">
+                        <input type="hidden" id="product-id">
+                        
+                        <div class="form-group">
+                            <label for="product-name">Название товара</label>
+                            <input type="text" id="product-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-category">Категория</label>
+                            <select id="product-category" required>
+                                <option value="materials">Строительные материалы</option>
+                                <option value="finishing">Отделочные материалы</option>
+                                <option value="tools">Инструменты и оборудование</option>
+                                <option value="plumbing">Сантехника</option>
+                                <option value="electrical">Электрика</option>
+                                <option value="windows">Окна и двери</option>
+                                <option value="flooring">Напольные покрытия</option>
+                                <option value="lighting">Освещение</option>
+                                <option value="roofing">Кровельные материалы</option>
+                                <option value="paint">Лакокрасочные материалы</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-description">Описание</label>
+                            <textarea id="product-description" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-price">Цена</label>
+                            <input type="text" id="product-price" placeholder="от 850 руб." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-image">URL изображения</label>
+                            <input type="url" id="product-image" placeholder="https://images.unsplash.com/...">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="product-rating">Рейтинг (1-5)</label>
+                            <select id="product-rating">
+                                <option value="5">★★★★★</option>
+                                <option value="4.5">★★★★½</option>
+                                <option value="4">★★★★</option>
+                                <option value="3.5">★★★½</option>
+                                <option value="3">★★★</option>
+                            </select>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancel-product-btn">Отмена</button>
+                            <button type="submit" class="btn btn-primary">Сохранить товар</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Contacts Management -->
+            <section id="contacts" class="admin-section">
+                <div class="section-header">
+                    <h2>Управление контактами</h2>
+                </div>
+
+                <form id="contacts-form" class="admin-form">
+                    <div class="form-group">
+                        <label for="contact-address">Адрес</label>
+                        <input type="text" id="contact-address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-phone">Телефон</label>
+                        <input type="tel" id="contact-phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-email">Email</label>
+                        <input type="email" id="contact-email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-hours">Время работы</label>
+                        <input type="text" id="contact-hours" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Сохранить контакты</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Settings -->
+            <section id="settings" class="admin-section">
+                <div class="section-header">
+                    <h2>Настройки системы</h2>
+                </div>
+
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>Резервное копирование</h3>
+                        <p>Создайте резервную копию всех данных</p>
+                        <button class="btn btn-secondary" id="backup-btn">
+                            <i class="fas fa-download"></i> Создать бэкап
+                        </button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Восстановление</h3>
+                        <p>Восстановите данные из резервной копии</p>
+                        <input type="file" id="restore-file" accept=".json" style="display: none;">
+                        <button class="btn btn-secondary" id="restore-btn">
+                            <i class="fas fa-upload"></i> Восстановить
+                        </button>
+                    </div>
+
+                    <div class="setting-card">
+                        <h3>Очистка данных</h3>
+                        <p>Удалите все данные (действие необратимо)</p>
+                        <button class="btn btn-danger" id="clear-data-btn">
+                            <i class="fas fa-trash"></i> Очистить все данные
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for confirmations -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3 id="modal-title">Подтверждение</h3>
+            <p id="modal-message">Вы уверены, что хотите выполнить это действие?</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="modal-cancel">Отмена</button>
+                <button class="btn btn-danger" id="modal-confirm">Подтвердить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
