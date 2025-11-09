@@ -768,6 +768,161 @@ function initMenuAnimations() {
         }, 500);
     }
 }
+// ===== УПРАВЛЕНИЕ АДМИН-ПАНЕЛЬЮ В ШАПКЕ САЙТА =====
+class AdminHeader {
+    constructor() {
+        this.adminBar = document.getElementById('adminBar');
+        this.init();
+    }
+
+    init() {
+        this.checkAdminStatus();
+        this.bindEvents();
+    }
+
+    checkAdminStatus() {
+        const session = JSON.parse(localStorage.getItem('santash_session') || '{}');
+        
+        if (session.loggedIn) {
+            this.showAdminBar();
+        } else {
+            this.hideAdminBar();
+        }
+    }
+
+    showAdminBar() {
+        if (this.adminBar) {
+            this.adminBar.style.display = 'block';
+            
+            // Добавляем отступ для основного контента, чтобы не перекрывался
+            const header = document.querySelector('header');
+            if (header) {
+                header.style.marginTop = '0';
+            }
+        }
+    }
+
+    hideAdminBar() {
+        if (this.adminBar) {
+            this.adminBar.style.display = 'none';
+            
+            // Убираем отступ
+            const header = document.querySelector('header');
+            if (header) {
+                header.style.marginTop = '0';
+            }
+        }
+    }
+
+    bindEvents() {
+        // Кнопка выхода
+        const logoutBtn = document.getElementById('adminLogout');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.logout();
+            });
+        }
+
+        // Проверяем статус при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            this.checkAdminStatus();
+        });
+
+        // Проверяем статус при изменении localStorage (если войдут/выйдут в другой вкладке)
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'santash_session') {
+                this.checkAdminStatus();
+            }
+        });
+    }
+
+    logout() {
+        if (confirm('Вы уверены, что хотите выйти из админ-панели?')) {
+            localStorage.removeItem('santash_session');
+            this.hideAdminBar();
+            this.showNotification('Вы вышли из админ-панели', 'success');
+            
+            // Если находимся на странице админ-панели, перенаправляем на главную
+            if (window.location.pathname.includes('admin.html')) {
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            }
+        }
+    }
+
+    showNotification(message, type = 'success') {
+        // Используем существующую систему уведомлений или создаем простую
+        const notification = document.createElement('div');
+        notification.className = `admin-notification ${type}`;
+        notification.innerHTML = `
+            <div class="admin-notification-content">
+                <span>${message}</span>
+                <button class="admin-notification-close">&times;</button>
+            </div>
+        `;
+        
+        // Стили для уведомления
+        if (!document.querySelector('#admin-notification-styles')) {
+            const styles = document.createElement('style');
+            styles.id = 'admin-notification-styles';
+            styles.textContent = `
+                .admin-notification {
+                    position: fixed;
+                    top: 70px;
+                    right: 20px;
+                    z-index: 10000;
+                    animation: adminSlideIn 0.3s ease;
+                }
+                .admin-notification-content {
+                    background: white;
+                    padding: 12px 18px;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    border-left: 4px solid #28a745;
+                    font-size: 14px;
+                }
+                .admin-notification.error .admin-notification-content {
+                    border-left-color: #dc3545;
+                }
+                .admin-notification-close {
+                    background: none;
+                    border: none;
+                    font-size: 16px;
+                    cursor: pointer;
+                    color: #666;
+                }
+                @keyframes adminSlideIn {
+                    from { transform: translateX(100%); opacity: 0; }
+                    to { transform: translateX(0); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(styles);
+        }
+        
+        document.body.appendChild(notification);
+        
+        // Авто-удаление через 3 секунды
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.style.animation = 'adminSlideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 3000);
+        
+        // Закрытие по клику
+        notification.querySelector('.admin-notification-close').addEventListener('click', () => {
+            notification.remove();
+        });
+    }
+}
+
+// Инициализация админ-панели в шапке
+const adminHeader = new AdminHeader();
 
 // Запускаем после полной загрузки страницы
 window.addEventListener('load', initMenuAnimations);
